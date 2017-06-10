@@ -2,14 +2,11 @@ package main;
 
 import java.math.BigDecimal;
 
-public class AddOperation implements Operation{
+public class AddOperation extends BinaryOperation{
 
 	@Override
-	public void apply(OperandStack values) {
-		BigDecimal value1 = values.peek();
-		values.pop();
-		BigDecimal value2 = values.peek();
-		values.replaceTop(value1.add(value2));
+	protected BigDecimal calculate(BigDecimal value1, BigDecimal value2) {
+		return value1.add(value2);
 	}
 
 }

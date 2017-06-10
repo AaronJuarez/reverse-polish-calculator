@@ -2,14 +2,11 @@ package main;
 
 import java.math.BigDecimal;
 
-public class SubtractOperation implements Operation{
+public class SubtractOperation extends BinaryOperation{
 
 	@Override
-	public void apply(OperandStack values) {
-		BigDecimal value1 = values.peek();
-		values.pop();
-		BigDecimal value2 = values.peek();
-		values.replaceTop(value2.subtract(value1));
+	protected BigDecimal calculate(BigDecimal value1, BigDecimal value2) {
+		return value2.subtract(value1);
 	}
 
 }
