@@ -22,10 +22,12 @@ public class Calculator {
 	}
 
 	public void add() {
-		
+		Operation addOperation = new AddOperation();
+		addOperation.apply(values);
 	}
 
-	public void substract() {
-		
+	public void subtract() {
+		Operation subtractOperation = new SubtractOperation();
+		subtractOperation.apply(values);
 	}
 }

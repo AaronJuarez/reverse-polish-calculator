@@ -28,7 +28,7 @@ public class OperationsTest {
 	
 	@Test
 	public void testSubstract() {
-		calculator.substract();
+		calculator.subtract();
 		assertEquals(new BigDecimal(16), calculator.getAccumulator());
 	}
 
