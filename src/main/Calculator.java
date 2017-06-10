@@ -30,4 +30,8 @@ public class Calculator {
 		Operation subtractOperation = new SubtractOperation();
 		subtractOperation.apply(values);
 	}
+
+	public void execute(String string) {
+		add();
+	}
 }
