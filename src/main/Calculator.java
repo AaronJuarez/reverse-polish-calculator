@@ -20,4 +20,12 @@ public class Calculator {
 	public void drop() {
 		values.pop();
 	}
+
+	public void add() {
+		
+	}
+
+	public void substract() {
+		
+	}
 }
