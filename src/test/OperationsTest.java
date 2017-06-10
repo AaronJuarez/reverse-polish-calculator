@@ -19,23 +19,11 @@ public class OperationsTest {
 		calculator.enter();
 		calculator.setAccumulator(new BigDecimal(4));
 	}
-
-	@Test
-	public void testAdd() {
-		calculator.add();
-		assertEquals(new BigDecimal(24), calculator.getAccumulator());
-	}
 	
 	@Test
 	public void testAddExecution() {
 		calculator.execute("+");
 		assertEquals(new BigDecimal(24), calculator.getAccumulator());
-	}
-	
-	@Test
-	public void testSubstract() {
-		calculator.subtract();
-		assertEquals(new BigDecimal(16), calculator.getAccumulator());
 	}
 	
 	@Test

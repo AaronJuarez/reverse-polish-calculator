@@ -21,17 +21,12 @@ public class Calculator {
 		values.pop();
 	}
 
-	public void add() {
-		Operation addOperation = new AddOperation();
-		addOperation.apply(values);
-	}
-
-	public void subtract() {
-		Operation subtractOperation = new SubtractOperation();
-		subtractOperation.apply(values);
-	}
-
 	public void execute(String string) {
-		add();
+		Operation operation = null;
+		if("+".equals(string))
+			operation = new AddOperation();
+		else if("-".equals(string))
+			operation = new SubtractOperation();
+		operation.apply(values);
 	}
 }
